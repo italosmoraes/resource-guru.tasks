@@ -30,3 +30,9 @@ yarn
 ```
 yarn ts-node src/three.ts
 ```
+
+## Notes on solution
+
+- added types to make it all a bit clearer
+- separated functions into single responsibility ones
+- it is a recursive execution of math functions that does not allow for much feffing about, unless it is rewritten to be a less functional thing and properly identifying operations or operands only

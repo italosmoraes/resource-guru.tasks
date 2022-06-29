@@ -64,7 +64,7 @@ interface Node {
   toString: () => string | number | null
 }
 
-const Node = (
+const Operation = (
   operator: Operator | any,
   value: number | null,
   rightNode: Node | null,
@@ -96,21 +96,21 @@ const Node = (
   }
 }
 
-const tree = Node(
+const tree = Operation(
   Operator['%'],
   null,
-  Node(
+  Operation(
     Operator['+'],
     null,
-    Node('', 7, null, null),
-    Node(
+    Operation('', 7, null, null),
+    Operation(
       Operator.x,
       null,
-      Node(Operator['-'], null, Node('', 3, null, null), Node('', 2, null, null)),
-      Node('', 5, null, null)
+      Operation(Operator['-'], null, Operation('', 3, null, null), Operation('', 2, null, null)),
+      Operation('', 5, null, null)
     )
   ),
-  Node('', 6, null, null)
+  Operation('', 6, null, null)
 )
 
 // (!) keeping assertions in place of tests

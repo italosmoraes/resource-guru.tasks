@@ -1,5 +1,4 @@
 // (!) keeping original for reference
-
 import assert from 'assert'
 
 const Node = (operator, value, left, right) => {
